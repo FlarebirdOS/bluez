@@ -1,6 +1,6 @@
 pkgname=bluez
 pkgver=5.83
-pkgrel=1
+pkgrel=2
 pkgdesc="Daemons for the bluetooth protocol stack"
 arch=('x86_64')
 url="http://www.bluez.org"
@@ -36,6 +36,7 @@ build() {
     local configure_args=(
         --sysconfdir=/etc
         --localstatedir=/var
+        --enable-library
         ${configure_options}
     )
 
